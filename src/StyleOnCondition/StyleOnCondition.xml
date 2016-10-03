@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="StyleOnCondition.widget.StyleOnCondition" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>StyleOnCondition</name>
+    <description>This widget will apply a style on its parent based on a microflow.</description>
+    <icon />
+
+    <properties>
+        <property key="MicroflowName" type="microflow" required="true">
+  			<caption>Boolean Microflow</caption>
+  			<category>Data source</category>
+  			<description>Select the Microflow that determines whether the element should be styled.</description>
+  			<returnType type="Boolean" />
+  		</property>
+        <property key="customstyleattribute" type="string" required="true" >
+          <caption>Enter your style attribute</caption>
+          <category>Appearance</category>
+          <description> </description>
+      </property>
+        <property key="customstylevalue" type="string" required="true" >
+          <caption>Enter your style value</caption>
+          <category>Appearance</category>
+          <description> </description>
+      </property>
+      <property key="Level" type="enumeration" defaultValue="One">
+            <caption>Level</caption>
+            <category>Appearance</category>
+            <description>Determines how many levels out, the style is to be applied.</description>
+            <enumerationValues>
+                <enumerationValue key="One">One</enumerationValue>
+                <enumerationValue key="Two">Two</enumerationValue>
+                <enumerationValue key="Three">Three</enumerationValue>
+                <enumerationValue key="Four">Four</enumerationValue>
+                <enumerationValue key="Five">Five</enumerationValue>
+            </enumerationValues>
+      </property>
+        <property key="applyforquery" type="boolean" defaultValue="false">
+          <caption>Apply style for a query?</caption>
+          <category>Appearance</category>
+          <description>'Yes' styles are applied for all elements returned by the query specified</description>
+      </property>
+        <property key="querystring" type="string" required="false" >
+          <caption>Enter the query</caption>
+          <category>Appearance</category>
+          <description>The query syntax is same as the dojo.query function. Eg. To apply style to all nodes with class="foo" enter .foo </description>
+      </property>
+        <property key="appendclass" type="boolean" defaultValue="false">
+          <caption>Append a style class?</caption>
+          <category>Appearance</category>
+          <description>'Yes' appends a style class you specify below to all elements returned by the query </description>
+      </property>
+        <property key="classstring" type="string" required="false" >
+          <caption>Style class to be appended</caption>
+          <category>Appearance</category>
+          <description> The style class to be appended </description>
+      </property>
+      <property key="ReturnValue" type="boolean" defaultValue="true">
+          <caption>Apply style on true?</caption>
+          <category>Data source</category>
+          <description>'Yes' styles the element(s) on a true outcome, 'No' on a false outcome.</description>
+      </property>
+      <property key="UpdateOnce" type="boolean" defaultValue="false">
+          <caption>Dont update?</caption>
+          <category>Data source</category>
+          <description>'Yes' does not update widget once initialized</description>
+      </property>
+    </properties>
+</widget>
+
